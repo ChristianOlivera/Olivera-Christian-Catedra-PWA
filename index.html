@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <title>Olivera Christian Catedra PWA</title>
+</head>
+<body>
+    <main>
+        <div id="contenedor">
+            <h1>Busca el clima de una ciudad</h1>
+            <div class="buscar">
+                <form id="buscar_ciudad">
+                    <input type="text" id="texto_ciudad" placeholder="Ingrese una ciudad">
+                    <button class="boton" type="submit">Buscar</button>
+                </form>   
+            </div>
+            <div id="ciudad_temp">
+                <h2 id="ciudad"></h2>
+                <img id="clima_icon" src="" height="100" width="100">
+                <div id="temp">
+                 <h2 id="temperatura"></h2>
+                 <p id="descripcion"></p>
+                </div>
+            </div>
+            <div class="datos">
+
+                <div class="caja_datos">
+                    <div class="nombre">
+                        <h2 class="temp_min">Temperatura Minima</h2>
+                    </div>
+                    <div class="dato">
+                        <p id="temp_min"></p>
+                    </div>
+                </div>
+
+                <div class="caja_datos">
+                    <div class="nombre">
+                        <h2 class="temp_max">Temperatura Maxima</h2>
+                    </div>
+                    <div class="dato">
+                        <p id="temp_max"></p>
+                    </div>
+                </div>
+
+                <div class="caja_datos">
+                    <div class="nombre">
+                        <h2 class="termica">Sensacion Termica</h2>
+                    </div>
+                    <div class="dato">
+                        <p id="termica"></p>
+                    </div>
+                </div>
+
+                <div class="caja_datos">
+                    <div class="nombre">
+                        <h2 class="humedad">Humedad</h2>
+                    </div>
+                    <div class="dato">
+                        <p id="humedad"></p>
+                    </div>
+                </div>
+
+                <div class="caja_datos">
+                    <div class="nombre">
+                        <h2 class="presion">Presion Atmosferica</h2>
+                    </div>
+                    <div class="dato">
+                        <p id="presion"></p>
+                    </div>
+                </div>
+
+                <div class="caja_datos">
+                    <div class="nombre">
+                        <h2 class="viento">Velocidad de Viento</h2>
+                    </div>
+                    <div class="dato">
+                        <p id="viento"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <iframe id="fondo" src=""></iframe>
+        <div class="loader" id="loader"></div>
+    </main>  
+    <script src="app.js"></script>
+</body>
+</html>

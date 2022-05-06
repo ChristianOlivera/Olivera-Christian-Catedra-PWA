@@ -1,0 +1,446 @@
+/*
+LINKS PALETA DE COLORES 
+SOLEADO: https://coolors.co/ffd15c-ffdc74-ffb65c
+NUBLADO: https://coolors.co/b7c3cd-dee2e6-ced4da
+LLUVIA: https://coolors.co/c6dbf0-aed1e6-a0c4e2
+TORMENTA: https://coolors.co/e6e9f2-d3d4e6-c1c1d9
+NIEVE: https://coolors.co/fcffeb-fff8eb-ebf1ff
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#fondo{
+    position: fixed;
+    min-width: 150%;
+    min-height: 150%;
+    z-index: -1;
+}
+#contenedor{
+    display: none;
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    background-color: aliceblue;
+    border-radius: 20px;
+}
+
+/*---------------------- BUSCADOR ----------------------*/
+
+h1{
+    text-align: center;
+    padding-top: 20px;
+}
+
+.buscar{
+    width: 95%;
+    margin: auto;
+    margin-top: 20px;
+}
+input{
+    width: 80%;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 1.4em;
+    padding-left: 20px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    color: #406284;
+    font-weight: bold;
+    border-style: none;
+    outline: none;
+}
+
+.boton {
+    width: 19%;
+    height: 40px;
+	box-shadow:inset 0px 0px 0px 0px #bbdaf7;
+	background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+	background-color:#79bbff;
+	border-radius: 5px;
+	border:1px solid #84bbf3;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size: 1.5em;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528ecc;
+}
+.boton:hover {
+	background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+	background-color:#378de5;
+}
+.boton:active {
+	position:relative;
+	top:1px;
+}
+
+/*---------------------- CIUDAD ----------------------*/
+
+#ciudad_temp{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: lightpink;
+    width: 85%;
+    height: 120px;
+    margin: auto;
+    border-radius: 20px;
+    margin-top: 40px;
+}
+#ciudad{
+    font-size: 2em;
+}
+
+#temp{
+    font-size: 1.5em;
+}
+#temperatura{
+    margin-bottom: 5px;
+}
+
+/*---------------------- DATOS EXTRA ----------------------*/
+
+.datos{
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    margin: auto;
+    margin-top: 60px;
+}
+.caja_datos{
+    width: 120px;
+    height: 120px;
+    border-radius: 20px;
+    background-color: aqua;
+    text-align: center;
+}
+
+.nombre{
+    background-color: bisque;
+    border-radius: 20px 20px 0px 0px;
+    height: 60px;
+    font-size: 0.6em;
+}
+
+.temp_min, .temp_max, .termica, .presion, .viento{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.humedad{
+    padding-top: 22.5px;
+}
+.dato{
+    width: 90px;
+    height: 90px;
+    margin: auto;
+}
+
+#temp_min, #temp_max, #termica, #humedad{
+    padding-top: 10px;
+    font-size: 1.6em;
+}
+
+#presion, #viento{
+    padding-top: 15px;
+    font-size: 1.3em;
+}
+
+/*---------------------- SPINNER ----------------------*/
+
+.loader {
+    font-size: 10px;
+    margin: 50px auto;
+    text-indent: -9999em;
+    width: 11em;
+    height: 11em;
+    border-radius: 50%;
+    background: #000000;
+    background: -moz-linear-gradient(left, #000000 10%, rgba(255, 255, 255, 0) 42%);
+    background: -webkit-linear-gradient(left, #000000 10%, rgba(255, 255, 255, 0) 42%);
+    background: -o-linear-gradient(left, #000000 10%, rgba(255, 255, 255, 0) 42%);
+    background: -ms-linear-gradient(left, #000000 10%, rgba(255, 255, 255, 0) 42%);
+    background: linear-gradient(to right, #000000 10%, rgba(255, 255, 255, 0) 42%);
+    position: relative;
+    -webkit-animation: load3 1.4s infinite linear;
+    animation: load3 1.4s infinite linear;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  .loader:before {
+    width: 50%;
+    height: 50%;
+    background: #000000;
+    border-radius: 100% 0 0 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+  }
+  .loader:after {
+    background: #ffffff;
+    width: 75%;
+    height: 75%;
+    border-radius: 50%;
+    content: '';
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+  @-webkit-keyframes load3 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes load3 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  
+
+  /*---------------------- MEDIA QUERIES ----------------------*/
+
+
+@media screen and (min-width:320px) and (max-width:426px){
+    #contenedor{
+        height: 1420px;
+        margin-top: 20px;
+    }
+
+    h1{
+        font-size: 1.2em;
+    }
+    .buscar{
+        display: block;
+        width: 90%;
+    }
+    input{
+        width: 100%;
+        font-size: 1em;
+    }
+    .boton{
+        margin-top: 20px;
+        width: 100%;
+        font-size: 1em;
+    }
+
+    #ciudad_temp{
+        display: block;
+        width: 90%;
+        height: 300px;
+    }
+
+    #ciudad{
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 1.4em;
+    }
+
+    #clima_icon{
+        display: block;
+        margin: auto;
+    }
+
+    #temp{
+        text-align: center;
+        padding-top: 20px;
+    }
+
+ .datos{
+     display: block;
+      
+ }   
+ .caja_datos{
+     margin: auto;
+     width: 90%;
+     margin-bottom: 20px;
+ }
+
+ .nombre{
+    font-size: 0.7em;
+    padding-top: 10px;
+}
+    
+}
+
+@media screen and (min-width:427px) and (max-width:600px){
+    #contenedor{
+        height: 1420px;
+        margin-top: 20px;
+    }
+
+    h1{
+        font-size: 1.2em;
+    }
+    .buscar{
+        display: block;
+        width: 90%;
+    }
+    input{
+        width: 100%;
+        font-size: 1em;
+    }
+    .boton{
+        margin-top: 20px;
+        width: 100%;
+        font-size: 1em;
+    }
+
+    #ciudad_temp{
+        display: block;
+        width: 90%;
+        height: 300px;
+    }
+
+    #ciudad{
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 1.4em;
+    }
+
+    #clima_icon{
+        display: block;
+        margin: auto;
+    }
+
+    #temp{
+        text-align: center;
+        padding-top: 20px;
+    }
+
+ .datos{
+     display: block;
+      
+ }   
+ .caja_datos{
+     margin: auto;
+     width: 90%;
+     margin-bottom: 20px;
+ }
+
+ .nombre{
+    font-size: 0.8em;
+    padding-top: 8px;
+}
+    
+}
+
+@media screen and (min-width:601px) and (max-width:768px){
+    #contenedor{
+        height: 1460px;
+        margin-top: 20px;
+    }
+
+    h1{
+        font-size: 1.6em;
+    }
+
+    .boton{
+        padding-top: 10px;
+        font-size: 1em;
+    }
+
+    #ciudad_temp{
+        display: block;
+        width: 90%;
+        height: 300px;
+    }
+
+    #ciudad{
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 1.8em;
+    }
+
+    #clima_icon{
+        display: block;
+        margin: auto;
+    }
+
+    #temp{
+        text-align: center;
+        padding-top: 20px;
+    }
+
+ .datos{
+     display: block;
+      
+ }   
+ .caja_datos{
+     margin: auto;
+     width: 90%;
+     margin-bottom: 40px;
+ }
+
+ .nombre{
+    font-size: 0.8em;
+    padding-top: 8px;
+}
+    
+}
+
+@media screen and (min-width:769px) and (max-width:1024px){
+    #contenedor{
+        height: 1460px;
+        margin-top: 20px;
+    }
+
+
+    .boton{
+        padding-top: 10px;
+        font-size: 1em;
+    }
+
+    #ciudad_temp{
+        height: 250px;
+    }
+
+ .datos{
+     display: block;
+      
+ }   
+ .caja_datos{
+     margin: auto;
+     width: 90%;
+     margin-bottom: 40px;
+ }
+
+ .nombre{
+     font-size: 0.9em;
+     padding-top: 6px;
+ }
+    
+}
